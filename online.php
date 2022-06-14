@@ -1,0 +1,20 @@
+<?php
+    $host="localhost";
+    $username="root";
+    $password="";
+    $dbname="online";
+    $conn=mysqli_connect($host,$username,$password,$dbname);
+    if($conn!=""){
+        if(isset($_POST["name"])){
+            $name=$_POST["name"];
+            $address=$_POST["address"];
+            $phone=$_POST["phone"];
+            $gmail=$_POST["gmail"];
+            $insert_query="insert into details (Name,Address,Phone,Gmail)
+             values('$name','$address','$phone','$gmail')";
+             $insert=mysqli_query($conn,$insert_query);
+        }else{
+            echo("Error:(");
+        }
+    }
+?>
