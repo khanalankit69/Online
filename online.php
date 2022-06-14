@@ -1,5 +1,5 @@
 <?php
-    $host="localhost";
+    $host="https://khanalankit69.github.io/Online/";
     $username="root";
     $password="";
     $dbname="online";
